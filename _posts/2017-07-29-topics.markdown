@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Topics that I will talk about on this blog"
+date:   2017-07-29 10:01:00
+categories: blog
+---
+<li>Peter Singer's Drowning Child Argument in Wars</li>
+<li>Cognitive Dissonance</li>
+<li>Jouranlism vs. Activism (Case Study: Regressive Left)</li>
+<li>Simulation Hypothesis of Nick Bostrom, and Martin Savage's Setup</li>
+<li>Mortality - My Cat</li>
+

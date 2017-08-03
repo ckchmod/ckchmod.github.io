@@ -6,22 +6,21 @@
 </description>
     <link>http://ckchmod.github.io/</link>
     <atom:link href="http://ckchmod.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 29 Jul 2017 10:09:34 -0700</pubDate>
-    <lastBuildDate>Sat, 29 Jul 2017 10:09:34 -0700</lastBuildDate>
+    <pubDate>Thu, 03 Aug 2017 09:54:36 -0700</pubDate>
+    <lastBuildDate>Thu, 03 Aug 2017 09:54:36 -0700</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>Topics that I will talk about on this blog</title>
-        <description>&lt;li&gt;Peter&#39;s Drowning Child Argument in Wars&lt;/li&gt;
-&lt;li&gt;Cognitive Dissonance&lt;/li&gt;
-&lt;li&gt;Jouranlism vs. Activism (Case Study: Regressive Left)&lt;/li&gt;
-&lt;li&gt;Simulation Hypothesis of Nick Bostrom, and Martin Savage&#39;s Setup&lt;/li&gt;
-&lt;li&gt;Mortality - My Cat&lt;/li&gt;
+        <title>Musings 2: Turing Tests</title>
+        <description>&lt;p&gt;&lt;li&gt;The world isn&#39;t beautiful or rosy. We trick ourselves to think it&#39;s beautiful to live on.&lt;/li&gt;&lt;/p&gt;
+&lt;p&gt;&lt;li&gt;Can machines question their own existensialism? If a script is written to explicitly question their consciousness, is it really conscious? In preparation for the Turing test questions such as, &quot;Are you human?&quot;, if a machine is explictly programmed to answer intelligently, in the eyes of the arbiter, how is this not a pass? Humans are deterministic exactly like machines. We just happen to be made of cells instead of plastic, and neurons have larger memory capacity than any man-made chips/storage so far.&lt;/li&gt;&lt;/p&gt;
+&lt;p&gt;&lt;li&gt;If we are part of a simulation &lt;i&gt;a la&lt;/i&gt; &lt;a href=&quot;http://www.simulation-argument.com/&quot;&gt;Nick Bostrom&lt;/a&gt;, is there a Turing test version for humans that is analogous to man-made machines? What sort or a level of intelligence test are we supposed to test in the eyes of the simulator (creation of the simulation)?&lt;/li&gt;&lt;/p&gt;
+&lt;p&gt;&lt;li&gt;If humans can code explictly for machine to fail the Turing test, which is easily achieveable without any effort with the current state of artificial intelligence, it&#39;s possible humans are failing some version of Turing test at the moment in the simulation world. It&#39;s possible to hard-code some machine so that it doesn&#39;t ask certain questions, thus intentionally failing certain tests. Similar argument could be made on humans in the simulation world. Humans may have been hard-wired to evade certain existential questions or to fail higher-dimensional Turing test, all in the context of simulation/simulator.&lt;/li&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Sat, 29 Jul 2017 03:01:00 -0700</pubDate>
-        <link>http://ckchmod.github.io/blog/2017/07/29/topics.html</link>
-        <guid isPermaLink="true">http://ckchmod.github.io/blog/2017/07/29/topics.html</guid>
+        <pubDate>Thu, 03 Aug 2017 02:34:00 -0700</pubDate>
+        <link>http://ckchmod.github.io/blog/2017/08/03/musings2.html</link>
+        <guid isPermaLink="true">http://ckchmod.github.io/blog/2017/08/03/musings2.html</guid>
         
         
         <category>blog</category>
@@ -29,12 +28,37 @@
       </item>
     
       <item>
-        <title>Blog Intro</title>
-        <description>&lt;p&gt;You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated. &lt;/p&gt;
+        <title>Musings 1: Theistic Reasoning vs. Scientific Reasoning</title>
+        <description>&lt;p&gt;&lt;li&gt;Suppose you&#39;re teaching a math class, and you give a problem for students to solve. Students are expected to show all work for their calculations. In solving the problem, one student demonstrates lack of rudimentary understanding of algebra. There are endless number of mistakes in his work, and yet somehow he concludes with the correct answer. Another student demonstrates his thorough foundational knowledge in algebra by carefully showing work line by line, but a mistake in computation costs him the answer. Whose work should be credited as valid? In academia, there wouldn&#39;t be a question as to whose work should be accepted as true or not. This is the difference between theisitic reasoning vs. scientific reasoning. Of course I&#39;m not saying that the theists even have the conclusion correct. So technically, thei work is wrong and the final solution most likely would be wrong as well. &lt;/li&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;li&gt;I&#39;m hesistant with acitivism in general. I worry about the slightest chance that I choose the wrong side of the history. Conviction should be hard to come by. A thorough examination of facts and conclusive choice of action are no trivial tasks. I also make sure no personal or emotional biases are involved in decision making for the very same reason from earlier. That&#39;s why it&#39;s hard to watch impassioned young students, whose sincerety I don&#39;t doubt, run around in mass-hysteria politcal activism. Mass hysteria is a real social phenomenon.&lt;/li&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;li&gt;Postmodernism contributes to conflation of emotions with facts, and thus makes the politcal activism more temperamental than it was originally intended to be.&lt;/li&gt;&lt;/p&gt;
 </description>
-        <pubDate>Mon, 24 Jul 2017 19:02:40 -0700</pubDate>
-        <link>http://ckchmod.github.io/blog/2017/07/24/blog-intro.html</link>
-        <guid isPermaLink="true">http://ckchmod.github.io/blog/2017/07/24/blog-intro.html</guid>
+        <pubDate>Mon, 31 Jul 2017 03:01:00 -0700</pubDate>
+        <link>http://ckchmod.github.io/blog/2017/07/31/musings1.html</link>
+        <guid isPermaLink="true">http://ckchmod.github.io/blog/2017/07/31/musings1.html</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Topics that I will talk about on this blog</title>
+        <description>&lt;p&gt;These are philosophical topics that interest me, and that have nothing to do with my research:&lt;/p&gt;
+
+&lt;li&gt;Peter Singer&#39;s Drowning Child Argument in Wars&lt;/li&gt;
+&lt;li&gt;Cognitive Dissonance&lt;/li&gt;
+&lt;li&gt;Jouranlism vs. Activism (Case Study: Regressive Left)&lt;/li&gt;
+&lt;li&gt;Simulation Hypothesis of Nick Bostrom, and Martin Savage&#39;s Setup&lt;/li&gt;
+&lt;li&gt;Ontological Proofs&amp;lt;?
+&lt;li&gt;Mortality - My Cat&lt;/li&gt;
+&lt;/li&gt;
+</description>
+        <pubDate>Sat, 29 Jul 2017 03:01:00 -0700</pubDate>
+        <link>http://ckchmod.github.io/blog/2017/07/29/topics.html</link>
+        <guid isPermaLink="true">http://ckchmod.github.io/blog/2017/07/29/topics.html</guid>
         
         
         <category>blog</category>

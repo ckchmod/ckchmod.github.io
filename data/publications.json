@@ -1,0 +1,68 @@
+{
+  "publications": [
+    {
+      "selected": true,
+      "authors": "Kang, C., Moore, J. A., Robertson, S., Wilms, M., Towlson, E. K., & Forkert, N. D.",
+      "year": "2025",
+      "title": "Structural network measures reveal the emergence of heavy-tailed degree distributions in lottery ticket multilayer perceptrons",
+      "journal": "Neural Networks",
+      "pages": "107308"
+    },
+    {
+      "selected": true,
+      "authors": "Kang, C., Mehta, P., Chang, Y. S., Bhadelia, R. A., Rojas, R., Wintermark, M., ... & Soman, S.",
+      "year": "2024",
+      "title": "Enhanced Reader Confidence and Differentiation of Calcification from Cerebral Microbleed Diagnosis Using QSM Relative to SWI",
+      "journal": "Clinical Neuroradiology",
+      "pages": "1-11"
+    },
+    {
+      "selected": true,
+      "authors": "Kang, C., McElroy, M., & Voulgarakis, N. K.",
+      "year": "2023",
+      "title": "Emergent Criticality in Coupled Boolean Networks",
+      "journal": "Entropy",
+      "pages": "25(2), 235"
+    },
+    {
+      "selected": false,
+      "authors": "Kang, C., Aguilar, B., & Shmulevich, I.",
+      "year": "2018",
+      "title": "Emergence of diversity in homogeneous coupled Boolean networks",
+      "journal": "Physical Review E",
+      "pages": "97(5), 052415"
+    },
+    {
+      "selected": false,
+      "authors": "Moore, J. A., Kang, C., Vigneshwaran, V., Stanley, E. A., Memon, A., Wilms, M., & Forkert, N. D.",
+      "year": "2025",
+      "title": "Towards realistic simulation of disease progression in the visual cortex with CNNs",
+      "journal": "Scientific Reports",
+      "pages": "15(1), 6099"
+    },
+    {
+      "selected": false,
+      "authors": "Souza, R., Stanley, E. A., Winder, A. J., Kang, C., Amador, K., Ohara, E. Y., ... & Forkert, N. D.",
+      "year": "2025",
+      "title": "Self-supervised identification and elimination of harmful datasets in distributed machine learning for medical image analysis",
+      "journal": "npj Digital Medicine",
+      "pages": "8(1), 104"
+    },
+    {
+      "selected": false,
+      "authors": "Souza, R., Stanley, E. A., Gulve, V., Moore, J., Kang, C., Camicioli, R., ... & Forkert, N. D.",
+      "year": "2024",
+      "title": "HarmonyTM: multi-center data harmonization applied to distributed learning for Parkinson's disease classification",
+      "journal": "Journal of Medical Imaging",
+      "pages": "11(5), 054502-054502"
+    },
+    {
+      "selected": false,
+      "authors": "Ashar, M., Moore, J.A., Kang, C., Zahinoor, I., Kahan, S., & Forkert, N.D.",
+      "year": "2024",
+      "title": "Visual Functions Are Associated with Biomarker Changes in Alzheimer's Disease",
+      "journal": "Journal of Alzheimer's Disease",
+      "pages": "1 Jan. 2024 : 623 - 637"
+    }
+  ]
+}

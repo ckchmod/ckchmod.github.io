@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Kang - Academic Page</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.2;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2px;
+        }
+        header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+        h1 {
+            margin-bottom: 5px;
+        }
+        .contact-info {
+            margin-bottom: 5px;
+        }
+        .contact-info p {
+            margin: 0;
+            line-height: 1.2;
+        }
+        h3 {
+            font-size: 1em; /* You can adjust this value to your preference */
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 2px;
+            margin-bottom: 5px;
+            display: flex; /* Use flexbox for alignment */
+            justify-content: space-between; /* Space between title and button */
+            align-items: center; /* Align items vertically */
+        }
+        h2 .expand-btn { /* Target button specifically inside h2 */
+             margin-left: 10px; /* Add some space */
+        }
+        h4 {
+            margin-bottom: 0px; /* Adjust this value to reduce spacing below h3 */
+            margin-top: 5px; /* Remove top margin as well */
+        }
+        .education-details h4 + h4 {
+            margin-top: 5px; /* Small gap between multiple h4 elements */
+        }
+        .education-details p {
+            margin-top: 5px; /* Minimal spacing above paragraphs */
+            margin-bottom: 0px; /* No bottom margin */
+        }
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px; /* Space between education items */
+        }
+        .education-item + .education-item {
+            margin-top: 5px; /* Minimal space between consecutive items */
+        }
+        .education-details {
+            flex: 1;
+        }
+        .education-dates {
+            display: grid;
+            grid-template-rows: auto auto;
+            justify-items: end;
+            min-width: 180px;
+            margin-left: 20px;
+        }
+        .education-date {
+            color: #666;
+            font-style: italic;
+            white-space: nowrap;
+            line-height: 1.4; /* Align with corresponding h4 */
+            margin: 0;
+            padding: 0;
+        }
+        .publication, .conference-item { /* Use a common class or specific ones */
+            margin-bottom: 10px; /* Reduced space */
+            padding: 8px; /* Consistent padding */
+            border-radius: 4px; /* Add border-radius */
+        }
+        .publication p, .conference-item p {
+             margin: 0; /* Remove default paragraph margin */
+             line-height: 1.3; /* Adjust line height */
+        }
+        .publication b, .conference-item b { /* Apply bold style */
+            font-weight: 600;
+        }
+        .publication i, .conference-item i { /* Apply italic style */
+            font-style: italic;
+        }
+        .first-author { /* Style for first author pubs/conf */
+             background-color: #f8f9fa;
+        }
+        .expand-btn {
+            background: none;
+            border: none;
+            color: #0066cc;
+            cursor: pointer;
+            padding: 0;
+            font-size: 0.9em; /* Slightly smaller button text */
+            white-space: nowrap; /* Prevent button text wrapping */
+        }
+        .expand-btn:hover {
+            text-decoration: underline;
+        }
+        .hidden { /* Utility class to hide elements */
+            display: none;
+        }
+        .error-message {
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chris Kang</h1>
+        <div class="contact-info">
+            <p>Email: chris.kang{at}ucalgary.ca</p>
+            <p>Github: <a href="https://github.com/ckchmod">https://github.com/ckchmod</a></p>
+        </div>
+    </header>
+
+    <section id="education">
+        <h2>Education</h2>
+         <div class="education-item">
+            <div class="education-details">
+                <h4>Alberta Innovates Postdoctoral Fellow</h4>
+                <h4>Eyes High Postdoctoral Fellow</h4>
+                <p>Medical Image Processing and Machine Learning Laboratory, University of Calgary</p>
+                <p>Advisor: Dr. Nils D. Forkert</p>
+            </div>
+            <div class="education-dates">
+                <div class="education-date">June 2023 ~ Current</div>
+                <div class="education-date">March 2023 ~ June 2023</div>
+            </div>
+        </div>
+        <div class="education-item">
+            <div class="education-details">
+                <h4>MSc in Applied Mathematics</h4>
+                <p>University of Washington</p>
+            </div>
+            <div class="education-dates">
+                <div class="education-date">May 2018</div>
+            </div>
+        </div>
+        <div class="education-item">
+            <div class="education-details">
+                <h4>BS in Mathematics</h4>
+                <p>Carnegie Mellon University</p>
+            </div>
+            <div class="education-dates">
+                <div class="education-date">May 2014</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research">
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Complex Systems Biology: Mathematical modeling of emergent behaviors in <b>non-linear dynamical systems</b>.</li>
+            <li>Energy-Based Neural Networks for NeuroAI: Implementation of <b>Hopfield networks</b> and deep learning architectures.</li>
+            <li>Medical Image Analysis: Machine learning and deep learning approaches for <b>neuroimaging biomarker discovery</b>.</li>
+        </ul>
+    </section>
+
+    <section id="publications">
+         <h2><span>Selected Publications</span> <button class="expand-btn" data-target="publications">(Show All)</button></h2>
+        <div id="publications-list">
+             <!-- Content will be loaded here -->
+        </div>
+    </section>
+
+    <section id="conferences">
+         <h2><span>Selected Conference Presentations</span> <button class="expand-btn" data-target="conferences">(Show All)</button></h2>
+        <div id="conferences-list">
+             <!-- Content will be loaded here -->
+        </div>
+    </section>
+
+    <script>
+        // --- Helper Function to Display Items ---
+        function displayItems(listElement, items, itemType) {
+            // console.log(`--- displayItems START for ${itemType} ---`);
+            listElement.innerHTML = '';
+
+            if (!items || items.length === 0) {
+                listElement.innerHTML = `<p>No ${itemType.replace(/_/g, ' ')} to display.</p>`;
+                listElement.classList.remove('hidden');
+                return;
+            }
+
+            try {
+                items.forEach((item, index) => {
+                    const div = document.createElement('div');
+                    const p = document.createElement('p');
+                    let authors = item.authors || "Unknown Authors";
+                    const nameToBold = 'Kang, C.'; // Target for bolding
+                    let isFirstAuthor = typeof authors === 'string' && authors.trim().startsWith(nameToBold);
+
+                    if (typeof authors === 'string') {
+                         const regex = /Kang,\s*C\./g; // Regex for bolding "Kang, C."
+                         authors = authors.replace(regex, `<b>${nameToBold}</b>`);
+                    } else {
+                       console.warn(`Item ${index} has non-string authors:`, authors);
+                    }
+
+                    if (itemType === 'publications') {
+                        div.className = 'publication';
+                        const year = item.year || 'N/A';
+                        const title = item.title || 'No Title';
+                        const journal = item.journal || 'No Journal';
+                        const pages = item.pages || 'N/A';
+                        p.innerHTML = `${authors} (${year}). ${title}. <i>${journal}</i>, ${pages}.`;
+                    } else { // conferences
+                        div.className = 'conference-item';
+                        const title = item.title || 'No Title';
+                        const conference = item.conference || 'No Conference';
+                        const date = item.date || 'N/A';
+                        p.innerHTML = `${title}<br>${authors}<br><i>${conference}</i>: ${date}`;
+                        if (item.type) { p.innerHTML += ` (${item.type})`; }
+                    }
+
+                    if (isFirstAuthor) {
+                         div.classList.add('first-author');
+                    }
+
+                    div.appendChild(p);
+                    listElement.appendChild(div);
+                });
+            } catch (error) {
+                 // Ensure index is defined in this scope for error logging
+                 let errorIndex = (typeof index !== 'undefined') ? index : -1;
+                console.error(`Error inside displayItems loop for ${itemType} (item index ${errorIndex}):`, error, item);
+                listElement.innerHTML += `<p class="error-message">Error rendering ${itemType} list (item ${errorIndex+1}). Check console.</p>`;
+            }
+
+            listElement.classList.remove('hidden');
+            // console.log(`--- displayItems END for ${itemType} ---`);
+        }
+
+
+        // --- Generic Loading Function ---
+        async function loadData(dataType, showAll) {
+            const config = {
+                publications: { /* ... */ jsonFile: './data/publications.json', dataKey: 'publications', listId: 'publications-list', titleSingular: 'Publication', titlePlural: 'Publications' },
+                conferences: { /* ... */ jsonFile: './data/conferences.json', dataKey: 'conferences', listId: 'conferences-list', titleSingular: 'Conference Presentation', titlePlural: 'Conference Presentations' }
+            };
+
+            const currentConfig = config[dataType];
+            if (!currentConfig) { console.error("Invalid dataType:", dataType); return; }
+
+            const listElement = document.getElementById(currentConfig.listId);
+            if (!listElement) { console.error(`Element with ID "${currentConfig.listId}" not found!`); return; }
+            const section = listElement.closest('section');
+            const h2 = section ? section.querySelector('h2') : null;
+            const titleSpan = h2 ? h2.querySelector('span') : null;
+            const btn = h2 ? h2.querySelector('.expand-btn') : null;
+            if (!section || !h2 || !titleSpan || !btn) { console.error(`Could not find all required elements (section/h2/span/button) for ${dataType}`); }
+
+            listElement.innerHTML = `<p>Loading ${currentConfig.titlePlural.toLowerCase()}...</p>`;
+            listElement.classList.remove('hidden');
+            console.log(`=== loadData START for ${dataType}, showAll: ${showAll} ===`); // DEBUG
+
+            try {
+                const response = await fetch(currentConfig.jsonFile);
+                console.log(`Fetch response status for ${dataType}: ${response.status}`); // DEBUG
+                if (!response.ok) { throw new Error(`HTTP error! Status: ${response.status} for ${currentConfig.jsonFile}`); }
+                let data;
+                try { data = await response.json(); } catch (jsonError) { throw new Error(`Invalid JSON format in ${currentConfig.jsonFile}. Check console.`); }
+                if (!data || !data[currentConfig.dataKey] || !Array.isArray(data[currentConfig.dataKey])) { throw new Error(`Invalid data structure in ${currentConfig.jsonFile}. Expected array at key "${currentConfig.dataKey}".`); }
+
+                const allItems = data[currentConfig.dataKey];
+                console.log(`Loaded ${allItems.length} total items for ${dataType}.`); // DEBUG
+                let itemsToShow = [];
+
+                if (showAll) {
+                    console.log(`Processing 'Show All' for ${dataType}.`); // DEBUG
+                    itemsToShow = allItems;
+                } else {
+                    console.log(`Processing 'Selected' for ${dataType}.`); // DEBUG
+                    if (dataType === 'publications') {
+
+                        // --- CORRECTED FILTER LOGIC (Indices 0, 2, 4 for 'Kang') ---
+                        itemsToShow = allItems.filter((item, itemIndex) => {
+                            if (!item.authors || typeof item.authors !== 'string') { return false; }
+                            // Split creates ["Last", "Init.", "Last", "Init.", ...]
+                            const authorsArray = item.authors.split(',').map(author => author.trim());
+                            let isTopThree = false;
+                            const targetLastName = 'Kang'; // Target last name
+
+                            // Check 1st author position (index 0 for last name)
+                            if (authorsArray.length > 0 && authorsArray[0] === targetLastName) {
+                                isTopThree = true;
+                            }
+                            // Check 2nd author position (index 2 for last name)
+                            else if (authorsArray.length > 2 && authorsArray[2] === targetLastName) {
+                                isTopThree = true;
+                            }
+                            // Check 3rd author position (index 4 for last name)
+                            else if (authorsArray.length > 4 && authorsArray[4] === targetLastName) {
+                                isTopThree = true;
+                            }
+                            // NOTE: Removed the complex console.log from inside the loop here!
+
+                            return isTopThree;
+                        });
+                        // Log the result *after* the filter finishes
+                        console.log(`Filtered selected publications. Count: ${itemsToShow.length}`); // DEBUG
+                        // --- END CORRECTED FILTER LOGIC ---
+
+                    } else if (dataType === 'conferences') {
+                        itemsToShow = allItems.slice(0, 3);
+                        console.log(`Sliced first ${itemsToShow.length} conferences.`); // DEBUG
+                    }
+                }
+
+                 if (!Array.isArray(itemsToShow)) { console.error("itemsToShow is not an array!", itemsToShow); itemsToShow = []; }
+                console.log(`Calling displayItems for ${dataType} with ${itemsToShow.length} items.`); // DEBUG
+                displayItems(listElement, itemsToShow, currentConfig.titlePlural.toLowerCase());
+
+                if (btn) { btn.textContent = showAll ? '(Show Selected)' : '(Show All)'; btn.onclick = () => loadData(dataType, !showAll); }
+                if (titleSpan) { titleSpan.textContent = showAll ? currentConfig.titlePlural : `Selected ${currentConfig.titlePlural}`; }
+
+            } catch (error) {
+                 console.error(`Error in loadData function for ${dataType}:`, error);
+                 listElement.innerHTML = `<p class="error-message">Error loading ${dataType}. ${error.message}. Check console.</p>`;
+                 listElement.classList.remove('hidden');
+            }
+             console.log(`=== loadData END for ${dataType} ===`); // DEBUG
+        }
+
+        // --- Initial Setup ---
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("DOM Content Loaded. Initializing data load."); // DEBUG
+            loadData('publications', false);
+            loadData('conferences', false);
+            console.log("Initial data load calls dispatched."); // DEBUG
+        });
+
+    </script>
+
+</body>
+</html>

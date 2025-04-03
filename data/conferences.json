@@ -1,0 +1,44 @@
+{
+  "conferences": [
+    {
+      "selected": true,
+      "title": "Towards associative memory in convolutional neural networks for in silico neurodegenerative diseases",
+      "authors": "Kang, C., Moore, J.A., Jeong, M., Wilms, M., & Forkert, N.D.",
+      "conference": "OHBM 2024",
+      "date": "June 2024",
+      "type": "Presentation"
+    },
+    {
+      "selected": true,
+      "title": "Emergent collective behaviors in coupled Boolean networks",
+      "authors": "Kang, C. & Voulgarakis, N.K.",
+      "conference": "JMM 2021: AMS Special Session on Applications of Mathematical Models and Dynamical Systems in Biology",
+      "date": "January 2022",
+      "type": "Presentation"
+    },
+    {
+      "selected": true,
+      "title": "Emergent collective behaviors in coupled Boolean networks",
+      "authors": "Kang, C. & Voulgarakis, N.K.",
+      "conference": "ICCS 2020: Tenth International Conference on Complex Systems",
+      "date": "July 2020",
+      "type": "Presentation"
+    },
+    {
+      "selected": true,
+      "title": "Multiscale Modeling of Multiple Myeloma Using Biocellion Framework",
+      "authors": "Kang, C., Kahan, S., & Ratushny, A.",
+      "conference": "Interagency Modeling and Analysis Group (IMAG) Multiscale Modeling Consortium Group - National Institutes of Health",
+      "date": "March 2017",
+      "type": "Poster"
+    },
+    {
+      "selected": true,
+      "title": "Triangle Partitioning and Linear Optimization of Forward Lines",
+      "authors": "Kang, C.",
+      "conference": "New England Symposium on Statistics In Sports (NESSIS) - Harvard University",
+      "date": "Sept. 2015",
+      "type": "Presentation"
+    }
+  ]
+}

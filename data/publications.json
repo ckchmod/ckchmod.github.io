@@ -6,7 +6,8 @@
       "year": "2025",
       "title": "Structural network measures reveal the emergence of heavy-tailed degree distributions in lottery ticket multilayer perceptrons",
       "journal": "Neural Networks",
-      "pages": "107308"
+      "pages": "107308",
+      "url": "https://www.sciencedirect.com/science/article/pii/S089360802500187X" 
     },
     {
       "selected": true,
@@ -14,7 +15,8 @@
       "year": "2024",
       "title": "Enhanced Reader Confidence and Differentiation of Calcification from Cerebral Microbleed Diagnosis Using QSM Relative to SWI",
       "journal": "Clinical Neuroradiology",
-      "pages": "1-11"
+      "pages": "1-11",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39690177/"
     },
     {
       "selected": true,
@@ -22,7 +24,8 @@
       "year": "2023",
       "title": "Emergent Criticality in Coupled Boolean Networks",
       "journal": "Entropy",
-      "pages": "25(2), 235"
+      "pages": "25(2), 235",
+      "url": "https://www.mdpi.com/1099-4300/25/2/235"
     },
     {
       "selected": false,
@@ -30,7 +33,8 @@
       "year": "2018",
       "title": "Emergence of diversity in homogeneous coupled Boolean networks",
       "journal": "Physical Review E",
-      "pages": "97(5), 052415"
+      "pages": "97(5), 052415",
+      "url": "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.97.052415"
     },
     {
       "selected": false,
@@ -38,7 +42,8 @@
       "year": "2025",
       "title": "Towards realistic simulation of disease progression in the visual cortex with CNNs",
       "journal": "Scientific Reports",
-      "pages": "15(1), 6099"
+      "pages": "15(1), 6099",
+      "url": "https://www.nature.com/articles/s41598-025-89738-y"
     },
     {
       "selected": false,
@@ -46,7 +51,8 @@
       "year": "2025",
       "title": "Self-supervised identification and elimination of harmful datasets in distributed machine learning for medical image analysis",
       "journal": "npj Digital Medicine",
-      "pages": "8(1), 104"
+      "pages": "8(1), 104",
+      "url": "https://www.nature.com/articles/s41746-025-01499-0"
     },
     {
       "selected": false,
@@ -54,7 +60,8 @@
       "year": "2024",
       "title": "HarmonyTM: multi-center data harmonization applied to distributed learning for Parkinson's disease classification",
       "journal": "Journal of Medical Imaging",
-      "pages": "11(5), 054502-054502"
+      "pages": "11(5), 054502-054502",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39308760/"
     },
     {
       "selected": false,
@@ -62,7 +69,8 @@
       "year": "2024",
       "title": "Visual Functions Are Associated with Biomarker Changes in Alzheimer's Disease",
       "journal": "Journal of Alzheimer's Disease",
-      "pages": "1 Jan. 2024 : 623 - 637"
+      "pages": "1 Jan. 2024 : 623 - 637",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38669529/"
     }
   ]
 }

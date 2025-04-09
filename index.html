@@ -129,7 +129,7 @@
         <h1>Chris Kang</h1>
         <div class="contact-info">
             <p>Email: chris.kang{at}ucalgary.ca</p>
-            <p>Github: <a href="https://github.com/ckchmod">https://github.com/ckchmod</a></p>
+            <p>Github: <a href="https://github.com/ckchmod" style="text-decoration:none" target="_blank" rel="noopener noreferrer">https://github.com/ckchmod</a></p>
         </div>
     </header>
 
@@ -227,19 +227,32 @@
                        console.warn(`Item ${index} has non-string authors:`, authors);
                     }
 
+                    // --- START LINK MODIFICATION ---
+                    const title = item.title || 'No Title';
+                    let titleHtml = title; // Default: title as plain text
+
+                    // Check if a valid URL exists
+                    if (item.url && typeof item.url === 'string' && item.url.trim() !== '') {
+                        // Wrap the title in an anchor tag
+                        titleHtml = `<a href="${item.url}" target="_blank" rel="noopener noreferrer" style="text-decoration:none">${title}</a>`;
+                        // target="_blank" opens the link in a new tab
+                        // rel="noopener noreferrer" is important for security when using target="_blank"
+                    }
+                    // --- END LINK MODIFICATION ---
+
                     if (itemType === 'publications') {
                         div.className = 'publication';
                         const year = item.year || 'N/A';
-                        const title = item.title || 'No Title';
                         const journal = item.journal || 'No Journal';
                         const pages = item.pages || 'N/A';
-                        p.innerHTML = `${authors} (${year}). ${title}. <i>${journal}</i>, ${pages}.`;
+                        // Use titleHtml which might be a link or plain text
+                        p.innerHTML = `${authors} (${year}). ${titleHtml}. <i>${journal}</i>, ${pages}.`;
                     } else { // conferences
                         div.className = 'conference-item';
-                        const title = item.title || 'No Title';
                         const conference = item.conference || 'No Conference';
                         const date = item.date || 'N/A';
-                        p.innerHTML = `${title}<br>${authors}<br><i>${conference}</i>: ${date}`;
+                        // Use titleHtml which might be a link or plain text
+                        p.innerHTML = `${titleHtml}<br>${authors}<br><i>${conference}</i>: ${date}`;
                         if (item.type) { p.innerHTML += ` (${item.type})`; }
                     }
 
@@ -260,7 +273,6 @@
             listElement.classList.remove('hidden');
             // console.log(`--- displayItems END for ${itemType} ---`);
         }
-
 
         // --- Generic Loading Function ---
         async function loadData(dataType, showAll) {

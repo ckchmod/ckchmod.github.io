@@ -122,11 +122,11 @@
             color: red;
             font-style: italic;
         }
-        #research a {
+        /* #research a */ a { /* Apply globally */
             color: #0066cc; /* Standard link blue */
             text-decoration: none;
         }
-        #research a b {
+        /* #research a b */ a b { /* Target bold text inside any link */
              font-weight: normal; /* Optional: make linked text not bold if desired */
         }
     </style>
@@ -136,7 +136,7 @@
         <h1>Chris Kang</h1>
         <div class="contact-info">
             <p>Email: chris.kang{at}ucalgary.ca</p>
-            <p>Github: <a href="https://github.com/ckchmod" style="text-decoration:none" target="_blank" rel="noopener noreferrer">https://github.com/ckchmod</a></p>
+            <p>Github: <a href="https://github.com/ckchmod" /* style="text-decoration:none" */ target="_blank" rel="noopener noreferrer">https://github.com/ckchmod</a></p>
         </div>
     </header>
 
@@ -264,7 +264,7 @@
                     // Check if a valid URL exists
                     if (item.url && typeof item.url === 'string' && item.url.trim() !== '') {
                         // Wrap the title in an anchor tag
-                        titleHtml = `<a href="${item.url}" target="_blank" rel="noopener noreferrer" style="text-decoration:none">${title}</a>`;
+                        titleHtml = `<a href="${item.url}" target="_blank" rel="noopener noreferrer" /* style="text-decoration:none" */>${title}</a>`;
                         // target="_blank" opens the link in a new tab
                         // rel="noopener noreferrer" is important for security when using target="_blank"
                     }

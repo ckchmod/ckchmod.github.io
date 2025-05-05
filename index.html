@@ -450,10 +450,9 @@
                         loadData('conferences', false)
                     ]);
                     console.log("Initial data loaded. Setting up keyword scrolling.");
-                    setupKeywordScrolling(); // Call setup ONCE after both loads finish
+                    setupKeywordScrolling(); 
                 } catch (error) {
-                    console.error("Error during initial data loading:", error);
-                    // Optionally display an error message to the user on the page
+                    console.error("Error during initial data loading:", error);                    
                 }
             }
             initializePage();

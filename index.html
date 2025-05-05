@@ -122,6 +122,13 @@
             color: red;
             font-style: italic;
         }
+        #research a {
+            color: #0066cc; /* Standard link blue */
+            text-decoration: none;
+        }
+        #research a b {
+             font-weight: normal; /* Optional: make linked text not bold if desired */
+        }
     </style>
 </head>
 <body>
@@ -180,9 +187,9 @@
     <section id="research">
         <h2>Research Interests</h2>
         <ul>
-            <li><i>Systems Biology</i>: Mathematical modeling of emergent behaviors in <b>gene regulatory networks</b> as <b>coupled Boolean networks</b>.</li>
-            <li><i>Energy-Based Neural Networks</i> for <i>NeuroAI</i>: Implemetning the <b>modern Hopfield network</b> and deep learning vision architectures.</li>
-            <li><i>Medical Image Analysis</i>: Developing deep learning architectures for <b>multimodal neuroimaging segmentations</b>.</li>
+            <li><i>Systems Biology</i>: Mathematical modeling of emergent behaviors in <a href="#pub-emergence-diversity"><b>gene regulatory networks</b></a> as <a href="#pub-emergent-criticality"><b>coupled Boolean networks</b></a>.</li>
+            <li><i>Energy-Based Neural Networks for NeuroAI</i>: Implementing the <a href="#conf-associative-memory"><b>modern Hopfield network</b></a> for vision models.</li>
+            <li><i>Medical Image Analysis</i>: Developing deep learning architectures for <a href="#pub-neuroimaging"><b>multimodal neuroimaging segmentations</b></a>.</li>
         </ul>
     </section>
 
@@ -212,6 +219,25 @@
                 return;
             }
 
+            // --- Define target item identifiers ---
+            const targetIds = {
+                publications: {
+                    "Emergence of diversity in homogeneous coupled Boolean networks": "pub-emergence-diversity",
+                    "Emergent Criticality in Coupled Boolean Networks": "pub-emergent-criticality",
+                    "Enhanced Reader Confidence and Differentiation of Calcification from Cerebral Microbleed Diagnosis Using QSM Relative to SWI": "pub-neuroimaging"
+                },
+                conferences: {
+                    "Towards associative memory in convolutional neural networks for in silico neurodegenerative diseases": "conf-associative-memory"
+                }
+            };
+
+            const keywords = {
+                "gene-regulatory-networks": /gene regulatory networks/i,
+                "coupled-boolean-networks": /coupled boolean networks/i,
+                "modern-hopfield-network": /modern hopfield network/i,
+                "multimodal-neuroimaging-segmentations": /multimodal neuroimaging segmentations/i
+            };
+
             try {
                 items.forEach((item, index) => {
                     const div = document.createElement('div');
@@ -219,10 +245,14 @@
                     let authors = item.authors || "Unknown Authors";
                     const nameToBold = 'Kang, C.'; // Target for bolding
                     let isFirstAuthor = typeof authors === 'string' && authors.trim().startsWith(nameToBold);
+                    let authorsHtml = authors; // Use a separate variable for HTML version
 
                     if (typeof authors === 'string') {
                          const regex = /Kang,\s*C\./g; // Regex for bolding "Kang, C."
-                         authors = authors.replace(regex, `<b>${nameToBold}</b>`);
+                         // Create HTML version ONLY if name is found
+                         if (regex.test(authors)) {
+                            authorsHtml = authors.replace(regex, `<b>${nameToBold}</b>`);
+                         }
                     } else {
                        console.warn(`Item ${index} has non-string authors:`, authors);
                     }
@@ -246,18 +276,25 @@
                         const journal = item.journal || 'No Journal';
                         const pages = item.pages || 'N/A';
                         // Use titleHtml which might be a link or plain text
-                        p.innerHTML = `${authors} (${year}). ${titleHtml}. <i>${journal}</i>, ${pages}.`;
+                        p.innerHTML = `${authorsHtml} (${year}). ${titleHtml}. <i>${journal}</i>, ${pages}.`;
                     } else { // conferences
                         div.className = 'conference-item';
                         const conference = item.conference || 'No Conference';
                         const date = item.date || 'N/A';
                         // Use titleHtml which might be a link or plain text
-                        p.innerHTML = `${titleHtml}<br>${authors}<br><i>${conference}</i>: ${date}`;
+                        p.innerHTML = `${titleHtml}<br>${authorsHtml}<br><i>${conference}</i>: ${date}`;
                         if (item.type) { p.innerHTML += ` (${item.type})`; }
                     }
 
                     if (isFirstAuthor) {
                          div.classList.add('first-author');
+                    }
+
+                    // --- START ID ASSIGNMENT FOR TARGETS ---
+                    const expectedId = targetIds[itemType] ? targetIds[itemType][title] : undefined;
+
+                    if (expectedId) { // Simplified check: if an ID is defined for this title
+                        div.id = expectedId;
                     }
 
                     div.appendChild(p);
@@ -314,8 +351,7 @@
                 } else {
                     console.log(`Processing 'Selected' for ${dataType}.`); // DEBUG
                     if (dataType === 'publications') {
-
-                        // --- CORRECTED FILTER LOGIC (Indices 0, 2, 4 for 'Kang') ---
+                        // --- START RESTORED FILTER LOGIC (Indices 0, 2, 4 for Last Name 'Kang') ---
                         itemsToShow = allItems.filter((item, itemIndex) => {
                             if (!item.authors || typeof item.authors !== 'string') { return false; }
                             // Split creates ["Last", "Init.", "Last", "Init.", ...]
@@ -335,16 +371,12 @@
                             else if (authorsArray.length > 4 && authorsArray[4] === targetLastName) {
                                 isTopThree = true;
                             }
-                            // NOTE: Removed the complex console.log from inside the loop here!
-
                             return isTopThree;
                         });
-                        // Log the result *after* the filter finishes
-                        console.log(`Filtered selected publications. Count: ${itemsToShow.length}`); // DEBUG
-                        // --- END CORRECTED FILTER LOGIC ---
-
+                        console.log(`Filtered selected publications (Indices 0, 2, 4 Kang). Count: ${itemsToShow.length}`); // DEBUG
+                        // --- END RESTORED FILTER LOGIC ---
                     } else if (dataType === 'conferences') {
-                        itemsToShow = allItems.slice(0, 3);
+                        itemsToShow = allItems.slice(0, 3); // Keep showing top 3 conferences
                         console.log(`Sliced first ${itemsToShow.length} conferences.`); // DEBUG
                     }
                 }
@@ -356,6 +388,10 @@
                 if (btn) { btn.textContent = showAll ? '(Show Selected)' : '(Show All)'; btn.onclick = () => loadData(dataType, !showAll); }
                 if (titleSpan) { titleSpan.textContent = showAll ? currentConfig.titlePlural : `Selected ${currentConfig.titlePlural}`; }
 
+                // --- Setup keyword scrolling after items are displayed ---
+                // setupKeywordScrolling(); // REMOVED FROM HERE
+                // --- End setup ---
+
             } catch (error) {
                  console.error(`Error in loadData function for ${dataType}:`, error);
                  listElement.innerHTML = `<p class="error-message">Error loading ${dataType}. ${error.message}. Check console.</p>`;
@@ -364,11 +400,63 @@
              console.log(`=== loadData END for ${dataType} ===`); // DEBUG
         }
 
+        // --- Keyword Scrolling Functionality ---
+        function setupKeywordScrolling() {
+            // console.log("Setting up keyword scrolling..."); // DEBUG
+            const keywordLinks = document.querySelectorAll('#research a[href^="#"]'); // Select links within research section pointing to fragment IDs
+
+            keywordLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent default jump
+                    const targetId = link.getAttribute('href').substring(1); // Get ID from href (remove #)
+                    // console.log(`Keyword link clicked, target ID: ${targetId}`); // DEBUG
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        // console.log("Found target element:", targetElement); // DEBUG
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                        // Optional: Add a temporary highlight effect
+                        targetElement.style.transition = 'background-color 0.5s ease-in-out';
+                        targetElement.style.backgroundColor = '#e8f0fe'; // Light blue highlight
+                        setTimeout(() => {
+                            targetElement.style.backgroundColor = ''; // Remove highlight
+                            // Ensure correct background is restored if it was .first-author
+                            if (targetElement.classList.contains('first-author')) {
+                                targetElement.style.backgroundColor = '#f8f9fa';
+                            } else {
+                                targetElement.style.backgroundColor = '';
+                            }
+                            targetElement.style.transition = ''; // Remove transition after use
+                        }, 1500); // Highlight duration
+                    } else {
+                        console.warn(`No target element found for ID: ${targetId}`); // DEBUG
+                    }
+                });
+            });
+            // console.log("Keyword scrolling setup complete."); // DEBUG
+        }
+        // --- End Keyword Scrolling ---
+
         // --- Initial Setup ---
         document.addEventListener('DOMContentLoaded', () => {
             console.log("DOM Content Loaded. Initializing data load."); // DEBUG
-            loadData('publications', false);
-            loadData('conferences', false);
+            // Load data and then setup scrolling
+            async function initializePage() {
+                try {
+                    // Wait for both initial loads to complete
+                    await Promise.all([
+                        loadData('publications', false),
+                        loadData('conferences', false)
+                    ]);
+                    console.log("Initial data loaded. Setting up keyword scrolling.");
+                    setupKeywordScrolling(); // Call setup ONCE after both loads finish
+                } catch (error) {
+                    console.error("Error during initial data loading:", error);
+                    // Optionally display an error message to the user on the page
+                }
+            }
+            initializePage();
             console.log("Initial data load calls dispatched."); // DEBUG
         });
 

@@ -15,7 +15,7 @@
       "year": "2025",
       "title": "Digital dementia and testing of cognitive intervention for degenerating neural networks",
       "journal": "npj Systems Biology and Applications",
-      "pages": "11, 125",
+      "pages": "11 (1), 125",
       "url": "https://www.nature.com/articles/s41540-025-00596-w"
     },
     {
@@ -42,7 +42,7 @@
       "year": "2024",
       "title": "Emergent Criticality in Coupled Boolean Networks",
       "journal": "Entropy",
-      "pages": "25(2), 235",
+      "pages": "25 (2), 235",
       "url": "https://www.mdpi.com/1099-4300/25/2/235"
     },
     {
@@ -51,16 +51,16 @@
       "year": "2018",
       "title": "Emergence of diversity in homogeneous coupled Boolean networks",
       "journal": "Physical Review E",
-      "pages": "97(5), 052415",
+      "pages": "97 (5), 052415",
       "url": "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.97.052415"
     },
     {
       "selected": false,
-      "authors": "Moore, J. A., Kang, C., Vigneshwaran, V., Stanley, E. A., Memon, A., Wilms, M., & Forkert, N. D.",
+      "authors": "J. A. Moore, C. Kang, V. Vigneshwaran, E. A. Stanley, A. Memon, M. Wilms, N. D. Forkert",
       "year": "2025",
       "title": "Towards realistic simulation of disease progression in the visual cortex with CNNs",
       "journal": "Scientific Reports",
-      "pages": "15(1), 6099",
+      "pages": "15 (1), 6099",
       "url": "https://www.nature.com/articles/s41598-025-89738-y"
     },
     {
@@ -69,7 +69,7 @@
       "year": "2025",
       "title": "Self-supervised identification and elimination of harmful datasets in distributed machine learning for medical image analysis",
       "journal": "npj Digital Medicine",
-      "pages": "8(1), 104",
+      "pages": "8 (1), 104",
       "url": "https://www.nature.com/articles/s41746-025-01499-0"
     },
     {
@@ -78,7 +78,7 @@
       "year": "2024",
       "title": "HarmonyTM: multi-center data harmonization applied to distributed learning for Parkinson's disease classification",
       "journal": "Journal of Medical Imaging",
-      "pages": "11(5), 054502-054502",
+      "pages": "11 (5), 054502",
       "url": "https://pubmed.ncbi.nlm.nih.gov/39308760/"
     },
     {

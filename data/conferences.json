@@ -3,6 +3,24 @@
     {
       "selected": true,
       "featured": true,
+      "title": "RIVA Cytology Classification and Detection: A Lesson on How \"None of Us is as Smart as All of Us\"",
+      "authors": "C. Kang, et al.",
+      "conference": "ISBI 2026",
+      "date": "2026",
+      "type": "Poster"
+    },
+    {
+      "selected": true,
+      "featured": true,
+      "title": "A Cascaded YOLO-Based Framework for Robust Cervical Cell Detection in Pap Smear Images",
+      "authors": "C. Kang, et al.",
+      "conference": "ISBI 2026",
+      "date": "2026",
+      "type": "Poster"
+    },
+    {
+      "selected": true,
+      "featured": true,
       "title": "Towards associative memory in convolutional neural networks for in silico neurodegenerative diseases",
       "authors": "C. Kang, J. A. Moore, M. Jeong, M. Wilms, & N. D. Forkert",
       "conference": "OHBM 2024 (Oral Presentation)",

@@ -339,9 +339,17 @@
                 if (!response.ok) { throw new Error(`HTTP error! Status: ${response.status} for ${currentConfig.jsonFile}`); }
                 let data;
                 try { data = await response.json(); } catch (jsonError) { throw new Error(`Invalid JSON format in ${currentConfig.jsonFile}. Check console.`); }
-                if (!data || !data[currentConfig.dataKey] || !Array.isArray(data[currentConfig.dataKey])) { throw new Error(`Invalid data structure in ${currentConfig.jsonFile}. Expected array at key "${currentConfig.dataKey}".`); }
+                let allItems;
+                if (Array.isArray(data)) {
+                    allItems = data;
+                } else if (data && Array.isArray(data[currentConfig.dataKey])) {
+                    allItems = data[currentConfig.dataKey];
+                } else {
+                    throw new Error(
+                        `Invalid data structure in ${currentConfig.jsonFile}. Expected either an array or object with key "${currentConfig.dataKey}".`
+                    );
+                }
 
-                const allItems = data[currentConfig.dataKey];
                 console.log(`Loaded ${allItems.length} total items for ${dataType}.`); // DEBUG
                 let itemsToShow = [];
 

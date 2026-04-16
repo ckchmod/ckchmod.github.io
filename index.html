@@ -221,32 +221,6 @@
 
     <script>
         // --- Helper Function to Display Items ---
-        function normalizePublicationItem(item, index, hasWarnings = new Set()) {
-            if (!item || typeof item !== 'object') { return null; }
-            const normalized = { ...item };
-
-            if (typeof normalized.featured !== 'boolean') {
-                normalized.featured = Boolean(normalized.featured);
-                if (normalized.featured === false && item && item.selected === undefined) {
-                    if (!hasWarnings.has(index)) {
-                        console.warn(`Publications: Missing explicit "featured" flag for item "${item.title || `index ${index}`}". Defaulting to false. Add "featured": true/false.`);
-                        hasWarnings.add(index);
-                    }
-                }
-            }
-
-            if (typeof normalized.first_author !== 'boolean') {
-                const authors = typeof normalized.authors === 'string' ? normalized.authors.trim() : '';
-                normalized.first_author = /^C\.?\s*Kang\b/.test(authors);
-                if (!hasWarnings.has(`fa-${index}`)) {
-                    console.info(`Publications: Missing explicit "first_author" flag for "${item.title || `index ${index}`}". Inferred as ${normalized.first_author}. Add "first_author": true/false if needed.`);
-                    hasWarnings.add(`fa-${index}`);
-                }
-            }
-
-            return normalized;
-        }
-
         function displayItems(listElement, items, itemType) {
             // console.log(`--- displayItems START for ${itemType} ---`);
             listElement.innerHTML = '';
@@ -277,12 +251,7 @@
             };
 
             try {
-                const publicationWarnings = new Set();
-                const sanitizedItems = (itemType === 'publications')
-                    ? items.map((item, index) => normalizePublicationItem(item, index, publicationWarnings))
-                    : items;
-
-                (itemType === 'publications' ? sanitizedItems : items).forEach((item, index) => {
+                items.forEach((item, index) => {
                     const div = document.createElement('div');
                     const p = document.createElement('p');
                     let authors = item.authors || "Unknown Authors";

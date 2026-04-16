@@ -2,8 +2,8 @@
   "publications": [
     {
       "selected": false,
-      "authors": "Stanley, E. A. M., Tsang, R. Y., Gillett, H., Souza, R., Vigneshwaran, V., Kang, C., McCradden, M. D., Wilms, M., & Forkert, N. D.",
-      "year": "2026",
+      "authors": "EAM Stanley, RY Tsang, H Gillett, R Souza, V Vigneshwaran, C Kang, ...",
+      "year": "2025",
       "title": "Connecting algorithmic fairness and fair outcomes in a sociotechnical simulation case study of AI-assisted healthcare",
       "journal": "Nature Communications",
       "pages": "17, 788",
@@ -11,7 +11,7 @@
     },
     {
       "selected": false,
-      "authors": "Moore, J. A., Vigneshwaran, V., Winder, A. J., Kang, C., Wilms, M., & Forkert, N. D.",
+      "authors": "JA Moore, V Vigneshwaran, AJ Winder, C Kang, M Wilms, ND Forkert",
       "year": "2025",
       "title": "Digital dementia and testing of cognitive intervention for degenerating neural networks",
       "journal": "npj Systems Biology and Applications",
@@ -20,26 +20,26 @@
     },
     {
       "selected": true,
-      "authors": "Kang, C., Moore, J. A., Robertson, S., Wilms, M., Towlson, E. K., & Forkert, N. D.",
+      "authors": "C Kang, JA Moore, S Robertson, M Wilms, EK Towlson, ND Forkert",
       "year": "2025",
       "title": "Structural network measures reveal the emergence of heavy-tailed degree distributions in lottery ticket multilayer perceptrons",
       "journal": "Neural Networks",
-      "pages": "107308",
+      "pages": "187, 107308",
       "url": "https://www.sciencedirect.com/science/article/pii/S089360802500187X"
     },
     {
       "selected": true,
-      "authors": "Kang, C., Mehta, P., Chang, Y. S., Bhadelia, R. A., Rojas, R., Wintermark, M., ... & Soman, S.",
-      "year": "2024",
+      "authors": "C Kang, P Mehta, YS Chang, RA Bhadelia, R Rojas, M Wintermark, ...",
+      "year": "2025",
       "title": "Enhanced Reader Confidence and Differentiation of Calcification from Cerebral Microbleed Diagnosis Using QSM Relative to SWI",
       "journal": "Clinical Neuroradiology",
-      "pages": "1-11",
+      "pages": "35 (2), 303-313",
       "url": "https://pubmed.ncbi.nlm.nih.gov/39690177/"
     },
     {
       "selected": true,
-      "authors": "Kang, C., McElroy, M., & Voulgarakis, N. K.",
-      "year": "2023",
+      "authors": "C Kang, M McElroy, NK Voulgarakis",
+      "year": "2024",
       "title": "Emergent Criticality in Coupled Boolean Networks",
       "journal": "Entropy",
       "pages": "25(2), 235",
@@ -47,7 +47,7 @@
     },
     {
       "selected": false,
-      "authors": "Kang, C., Aguilar, B., & Shmulevich, I.",
+      "authors": "C Kang, B Aguilar, I Shmulevich",
       "year": "2018",
       "title": "Emergence of diversity in homogeneous coupled Boolean networks",
       "journal": "Physical Review E",
@@ -65,7 +65,7 @@
     },
     {
       "selected": false,
-      "authors": "Souza, R., Stanley, E. A., Winder, A. J., Kang, C., Amador, K., Ohara, E. Y., ... & Forkert, N. D.",
+      "authors": "R Souza, EAM Stanley, AJ Winder, C Kang, K Amador, EY Ohara, ...",
       "year": "2025",
       "title": "Self-supervised identification and elimination of harmful datasets in distributed machine learning for medical image analysis",
       "journal": "npj Digital Medicine",
@@ -74,7 +74,7 @@
     },
     {
       "selected": false,
-      "authors": "Souza, R., Stanley, E. A., Gulve, V., Moore, J., Kang, C., Camicioli, R., ... & Forkert, N. D.",
+      "authors": "R Souza, EAM Stanley, V Gulve, J Moore, C Kang, R Camicioli, O Monchi, ...",
       "year": "2024",
       "title": "HarmonyTM: multi-center data harmonization applied to distributed learning for Parkinson's disease classification",
       "journal": "Journal of Medical Imaging",
@@ -83,12 +83,30 @@
     },
     {
       "selected": false,
-      "authors": "Ashar, M., Moore, J.A., Kang, C., Zahinoor, I., Kahan, S., & Forkert, N.D.",
+      "authors": "A Memon, JA Moore, C Kang, Z Ismail, ND Forkert, ...",
       "year": "2024",
       "title": "Visual Functions Are Associated with Biomarker Changes in Alzheimer's Disease",
       "journal": "Journal of Alzheimer's Disease",
-      "pages": "1 Jan. 2024 : 623 - 637",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/38669529/"
+      "pages": "99 (2), 623-637",
+      "url": "https://link.springer.com/article/10.1007/s12120-024-01180-4"
+    },
+    {
+      "selected": false,
+      "authors": "C Kang",
+      "year": "2023",
+      "title": "Critical Dynamics in Coupled Boolean Networks With Applications in Pluripotent Stem Cells",
+      "journal": "Washington State University",
+      "pages": "",
+      "url": ""
+    },
+    {
+      "selected": false,
+      "authors": "C Kang, N Voulgarakis",
+      "year": "2022",
+      "title": "Emergent collective behaviors in coupled Boolean networks.",
+      "journal": "Virtual Joint Mathematics Meetings (JMM 2022)",
+      "pages": "",
+      "url": ""
     }
   ]
 }

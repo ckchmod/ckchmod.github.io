@@ -6,7 +6,7 @@
       "title": "RIVA Cytology Classification and Detection: A Lesson on How \"None of Us is as Smart as All of Us\"",
       "authors": "C. Kang, V. Vigneshwaran, N. D. Forkert",
       "conference": "ISBI 2026",
-      "date": "2026",
+      "date": "April 2026",
       "type": "Poster"
     },
     {
@@ -15,17 +15,17 @@
       "title": "A Cascaded YOLO-Based Framework for Robust Cervical Cell Detection in Pap Smear Images",
       "authors": "V. Vigneshwaran, C. Kang, N. D. Forkert",
       "conference": "ISBI 2026",
-      "date": "2026",
-      "type": "Poster"
+      "date": "April 2026",
+      "type": "Oral Presentation"
     },
     {
       "selected": true,
       "featured": true,
       "title": "Towards associative memory in convolutional neural networks for in silico neurodegenerative diseases",
       "authors": "C. Kang, J. A. Moore, M. Jeong, M. Wilms, & N. D. Forkert",
-      "conference": "OHBM 2024 (Oral Presentation)",
+      "conference": "OHBM 2024",
       "date": "June 2024",
-      "type": ""
+      "type": "Oral Presentation"
     },
     {
       "selected": true,
@@ -59,9 +59,9 @@
       "featured": false,
       "title": "Triangle Partitioning and Linear Optimization of Forward Lines",
       "authors": "C. Kang",
-      "conference": "New England Symposium on Statistics In Sports (Oral Presentation)",
-      "date": "Sept. 2015",
-      "type": ""
+      "conference": "New England Symposium on Statistics In Sports",
+      "date": "September 2015",
+      "type": "Oral Presentation"
     }
   ]
 }

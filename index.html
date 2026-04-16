@@ -102,18 +102,7 @@
         }
         .publication-featured { /* Style for curated/featured publications */
              background-color: #f8f9fa;
-             border: 1px solid #dce3ef;
-        }
-        .first-author-badge {
-            display: inline-block;
-            margin-left: 6px;
-            font-size: 0.74em;
-            font-style: normal;
-            color: #0a5fa5;
-            border: 1px solid #d7e6ff;
-            background-color: #eef5ff;
-            border-radius: 999px;
-            padding: 1px 6px;
+             border: 1px solid transparent;
         }
         .expand-btn {
             background: none;
@@ -255,15 +244,15 @@
                     const div = document.createElement('div');
                     const p = document.createElement('p');
                     let authors = item.authors || "Unknown Authors";
-                    const nameToBold = 'Kang, C.'; // Target for bolding
-                    let isFirstAuthor = item.first_author === true || (typeof authors === 'string' && authors.trim().startsWith(nameToBold));
+                    const nameToBold = 'Kang, C.'; // Primary target for bolding/first-author detection
+                    let isFirstAuthor = item.first_author === true || (typeof authors === 'string' && /^(Kang,\s*C\.|C\.\s*Kang)\b/.test(authors.trim()));
                     let authorsHtml = authors; // Use a separate variable for HTML version
 
                     if (typeof authors === 'string') {
-                         const regex = /Kang,\s*C\./g; // Regex for bolding "Kang, C."
+                         const regex = /Kang,\s*C\.|C\.\s*Kang/g; // Regex for "Kang, C." and "C. Kang"
                          // Create HTML version ONLY if name is found
                          if (regex.test(authors)) {
-                            authorsHtml = authors.replace(regex, `<b>${nameToBold}</b>`);
+                            authorsHtml = authors.replace(regex, '<b>' + '$&' + '</b>');
                          }
                     } else {
                        console.warn(`Item ${index} has non-string authors:`, authors);
@@ -283,15 +272,13 @@
                     // --- END LINK MODIFICATION ---
 
                     if (itemType === 'publications') {
-                        const isFeatured = item.featured === true || item.selected === true;
                         div.className = 'publication';
                         const year = item.year || 'N/A';
                         const journal = item.journal || 'No Journal';
                         const pages = item.pages || 'N/A';
-                        const firstAuthorTag = isFirstAuthor ? ' <span class="first-author-badge">First author</span>' : '';
                         // Use titleHtml which might be a link or plain text
-                        p.innerHTML = `${authorsHtml}${firstAuthorTag} (${year}). ${titleHtml}. <i>${journal}</i>, ${pages}.`;
-                        if (isFeatured) {
+                        p.innerHTML = `${authorsHtml} (${year}). ${titleHtml}. <i>${journal}</i>, ${pages}.`;
+                        if (isFirstAuthor) {
                             div.classList.add('publication-featured');
                         }
                     } else { // conferences
@@ -300,6 +287,9 @@
                         const date = item.date || 'N/A';
                         // Use titleHtml which might be a link or plain text
                         p.innerHTML = `${titleHtml}<br>${authorsHtml}<br><i>${conference}</i>: ${date}`;
+                        if (isFirstAuthor) {
+                            div.classList.add('publication-featured');
+                        }
                         if (item.type) { p.innerHTML += ` (${item.type})`; }
                     }
 
@@ -373,34 +363,14 @@
                     console.log(`Processing 'Featured' for ${dataType}.`); // DEBUG
                     if (dataType === 'publications') {
                         itemsToShow = allItems.filter((item, itemIndex) => {
-                            if (item && (Object.prototype.hasOwnProperty.call(item, 'featured') || Object.prototype.hasOwnProperty.call(item, 'selected'))) {
-                                return (item && (item.featured === true || item.selected === true));
-                            }
-                            if (!item.authors || typeof item.authors !== 'string') { return false; }
-                            // Split creates ["Last", "Init.", "Last", "Init.", ...]
-                            const authorsArray = item.authors.split(',').map(author => author.trim());
-                            let isTopThree = false;
-                            const targetLastName = 'Kang'; // Target last name
-
-                            // Check 1st author position (index 0 for last name)
-                            if (authorsArray.length > 0 && authorsArray[0] === targetLastName) {
-                                isTopThree = true;
-                            }
-                            // Check 2nd author position (index 2 for last name)
-                            else if (authorsArray.length > 2 && authorsArray[2] === targetLastName) {
-                                isTopThree = true;
-                            }
-                            // Check 3rd author position (index 4 for last name)
-                            else if (authorsArray.length > 4 && authorsArray[4] === targetLastName) {
-                                isTopThree = true;
-                            }
-                            return isTopThree;
+                            return item && (item.featured === true || item.selected === true);
                         });
                         console.log(`Filtered featured publications. Count: ${itemsToShow.length}`); // DEBUG
-                        // --- END RESTORED FILTER LOGIC ---
                     } else if (dataType === 'conferences') {
-                        itemsToShow = allItems.slice(0, 3); // Keep showing top 3 conferences
-                        console.log(`Sliced first ${itemsToShow.length} conferences.`); // DEBUG
+                        itemsToShow = allItems.filter((item, itemIndex) => {
+                            return item && (item.featured === true || item.selected === true);
+                        });
+                        console.log(`Filtered featured conferences. Count: ${itemsToShow.length}`); // DEBUG
                     }
                 }
 

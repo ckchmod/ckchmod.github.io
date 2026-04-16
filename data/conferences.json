@@ -4,7 +4,7 @@
       "selected": true,
       "featured": true,
       "title": "RIVA Cytology Classification and Detection: A Lesson on How \"None of Us is as Smart as All of Us\"",
-      "authors": "C. Kang, et al.",
+      "authors": "C. Kang, V. Vigneshwaran, N. D. Forkert",
       "conference": "ISBI 2026",
       "date": "2026",
       "type": "Poster"
@@ -13,7 +13,7 @@
       "selected": true,
       "featured": true,
       "title": "A Cascaded YOLO-Based Framework for Robust Cervical Cell Detection in Pap Smear Images",
-      "authors": "C. Kang, et al.",
+      "authors": "V. Vigneshwaran, C. Kang, N. D. Forkert",
       "conference": "ISBI 2026",
       "date": "2026",
       "type": "Poster"
@@ -29,7 +29,7 @@
     },
     {
       "selected": true,
-      "featured": true,
+      "featured": false,
       "title": "Emergent collective behaviors in coupled Boolean networks",
       "authors": "C. Kang & N. K. Voulgarakis",
       "conference": "JMM 2021: AMS Special Session on Applications of Mathematical Models and Dynamical Systems in Biology",
@@ -38,7 +38,7 @@
     },
     {
       "selected": true,
-      "featured": true,
+      "featured": false,
       "title": "Emergent collective behaviors in coupled Boolean networks",
       "authors": "C. Kang & N. K. Voulgarakis",
       "conference": "ICCS 2020: Tenth International Conference on Complex Systems",
@@ -47,7 +47,7 @@
     },
     {
       "selected": true,
-      "featured": true,
+      "featured": false,
       "title": "Multiscale Modeling of Multiple Myeloma Using Biocellion Framework",
       "authors": "C. Kang, S. Kahan, & A. Ratushny",
       "conference": "Interagency Modeling and Analysis Group Multiscale Modeling Consortium Group - National Institutes of Health",
@@ -56,7 +56,7 @@
     },
     {
       "selected": true,
-      "featured": true,
+      "featured": false,
       "title": "Triangle Partitioning and Linear Optimization of Forward Lines",
       "authors": "C. Kang",
       "conference": "New England Symposium on Statistics In Sports (Oral Presentation)",

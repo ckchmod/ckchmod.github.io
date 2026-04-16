@@ -2,6 +2,8 @@
   "publications": [
     {
       "selected": false,
+      "featured": false,
+      "first_author": false,
       "authors": "E. A. M. Stanley, R. Y. Tsang, H. Gillett, R. Souza, V. Vigneshwaran, C. Kang, et al.",
       "year": "2025",
       "title": "Connecting algorithmic fairness and fair outcomes in a sociotechnical simulation case study of AI-assisted healthcare",
@@ -11,6 +13,8 @@
     },
     {
       "selected": false,
+      "featured": false,
+      "first_author": false,
       "authors": "J. A. Moore, V. Vigneshwaran, A. J. Winder, C. Kang, M. Wilms, N. D. Forkert",
       "year": "2025",
       "title": "Digital dementia and testing of cognitive intervention for degenerating neural networks",
@@ -20,6 +24,8 @@
     },
     {
       "selected": true,
+      "featured": true,
+      "first_author": true,
       "authors": "C. Kang, J. A. Moore, S. Robertson, M. Wilms, E. K. Towlson, N. D. Forkert",
       "year": "2025",
       "title": "Structural network measures reveal the emergence of heavy-tailed degree distributions in lottery ticket multilayer perceptrons",
@@ -29,6 +35,8 @@
     },
     {
       "selected": true,
+      "featured": true,
+      "first_author": true,
       "authors": "C. Kang, P. Mehta, Y. S. Chang, R. A. Bhadelia, R. Rojas, M. Wintermark, et al.",
       "year": "2025",
       "title": "Enhanced Reader Confidence and Differentiation of Calcification from Cerebral Microbleed Diagnosis Using QSM Relative to SWI",
@@ -38,6 +46,8 @@
     },
     {
       "selected": true,
+      "featured": true,
+      "first_author": true,
       "authors": "C. Kang, M. McElroy, N. K. Voulgarakis",
       "year": "2024",
       "title": "Emergent Criticality in Coupled Boolean Networks",
@@ -47,6 +57,8 @@
     },
     {
       "selected": false,
+      "featured": false,
+      "first_author": true,
       "authors": "C. Kang, B. Aguilar, I. Shmulevich",
       "year": "2018",
       "title": "Emergence of diversity in homogeneous coupled Boolean networks",
@@ -56,6 +68,8 @@
     },
     {
       "selected": false,
+      "featured": false,
+      "first_author": false,
       "authors": "J. A. Moore, C. Kang, V. Vigneshwaran, E. A. Stanley, A. Memon, M. Wilms, N. D. Forkert",
       "year": "2025",
       "title": "Towards realistic simulation of disease progression in the visual cortex with CNNs",
@@ -65,6 +79,8 @@
     },
     {
       "selected": false,
+      "featured": false,
+      "first_author": false,
       "authors": "R. Souza, E. A. M. Stanley, A. J. Winder, C. Kang, K. Amador, E. Y. Ohara, et al.",
       "year": "2025",
       "title": "Self-supervised identification and elimination of harmful datasets in distributed machine learning for medical image analysis",
@@ -74,6 +90,8 @@
     },
     {
       "selected": false,
+      "featured": false,
+      "first_author": false,
       "authors": "R. Souza, E. A. M. Stanley, V. Gulve, J. Moore, C. Kang, R. Camicioli, O. Monchi, et al.",
       "year": "2024",
       "title": "HarmonyTM: multi-center data harmonization applied to distributed learning for Parkinson's disease classification",
@@ -83,6 +101,8 @@
     },
     {
       "selected": false,
+      "featured": false,
+      "first_author": false,
       "authors": "A. Memon, J. A. Moore, C. Kang, Z. Ismail, N. D. Forkert, et al.",
       "year": "2024",
       "title": "Visual Functions Are Associated with Biomarker Changes in Alzheimer's Disease",
@@ -92,6 +112,8 @@
     },
     {
       "selected": false,
+      "featured": false,
+      "first_author": true,
       "authors": "C. Kang",
       "year": "2023",
       "title": "Critical Dynamics in Coupled Boolean Networks With Applications in Pluripotent Stem Cells",
@@ -101,6 +123,8 @@
     },
     {
       "selected": false,
+      "featured": false,
+      "first_author": true,
       "authors": "C. Kang, N. Voulgarakis",
       "year": "2022",
       "title": "Emergent collective behaviors in coupled Boolean networks.",

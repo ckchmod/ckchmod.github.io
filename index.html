@@ -100,8 +100,20 @@
         .publication i, .conference-item i { /* Apply italic style */
             font-style: italic;
         }
-        .first-author { /* Style for first author pubs/conf */
+        .publication-featured { /* Style for curated/featured publications */
              background-color: #f8f9fa;
+             border: 1px solid #dce3ef;
+        }
+        .first-author-badge {
+            display: inline-block;
+            margin-left: 6px;
+            font-size: 0.74em;
+            font-style: normal;
+            color: #0a5fa5;
+            border: 1px solid #d7e6ff;
+            background-color: #eef5ff;
+            border-radius: 999px;
+            padding: 1px 6px;
         }
         .expand-btn {
             background: none;
@@ -244,7 +256,7 @@
                     const p = document.createElement('p');
                     let authors = item.authors || "Unknown Authors";
                     const nameToBold = 'Kang, C.'; // Target for bolding
-                    let isFirstAuthor = typeof authors === 'string' && authors.trim().startsWith(nameToBold);
+                    let isFirstAuthor = item.first_author === true || (typeof authors === 'string' && authors.trim().startsWith(nameToBold));
                     let authorsHtml = authors; // Use a separate variable for HTML version
 
                     if (typeof authors === 'string') {
@@ -271,12 +283,17 @@
                     // --- END LINK MODIFICATION ---
 
                     if (itemType === 'publications') {
+                        const isFeatured = item.featured === true || item.selected === true;
                         div.className = 'publication';
                         const year = item.year || 'N/A';
                         const journal = item.journal || 'No Journal';
                         const pages = item.pages || 'N/A';
+                        const firstAuthorTag = isFirstAuthor ? ' <span class="first-author-badge">First author</span>' : '';
                         // Use titleHtml which might be a link or plain text
-                        p.innerHTML = `${authorsHtml} (${year}). ${titleHtml}. <i>${journal}</i>, ${pages}.`;
+                        p.innerHTML = `${authorsHtml}${firstAuthorTag} (${year}). ${titleHtml}. <i>${journal}</i>, ${pages}.`;
+                        if (isFeatured) {
+                            div.classList.add('publication-featured');
+                        }
                     } else { // conferences
                         div.className = 'conference-item';
                         const conference = item.conference || 'No Conference';
@@ -284,10 +301,6 @@
                         // Use titleHtml which might be a link or plain text
                         p.innerHTML = `${titleHtml}<br>${authorsHtml}<br><i>${conference}</i>: ${date}`;
                         if (item.type) { p.innerHTML += ` (${item.type})`; }
-                    }
-
-                    if (isFirstAuthor) {
-                         div.classList.add('first-author');
                     }
 
                     // --- START ID ASSIGNMENT FOR TARGETS ---
@@ -357,10 +370,12 @@
                     console.log(`Processing 'Show All' for ${dataType}.`); // DEBUG
                     itemsToShow = allItems;
                 } else {
-                    console.log(`Processing 'Selected' for ${dataType}.`); // DEBUG
+                    console.log(`Processing 'Featured' for ${dataType}.`); // DEBUG
                     if (dataType === 'publications') {
-                        // --- START RESTORED FILTER LOGIC (Indices 0, 2, 4 for Last Name 'Kang') ---
                         itemsToShow = allItems.filter((item, itemIndex) => {
+                            if (item && (Object.prototype.hasOwnProperty.call(item, 'featured') || Object.prototype.hasOwnProperty.call(item, 'selected'))) {
+                                return (item && (item.featured === true || item.selected === true));
+                            }
                             if (!item.authors || typeof item.authors !== 'string') { return false; }
                             // Split creates ["Last", "Init.", "Last", "Init.", ...]
                             const authorsArray = item.authors.split(',').map(author => author.trim());
@@ -381,7 +396,7 @@
                             }
                             return isTopThree;
                         });
-                        console.log(`Filtered selected publications (Indices 0, 2, 4 Kang). Count: ${itemsToShow.length}`); // DEBUG
+                        console.log(`Filtered featured publications. Count: ${itemsToShow.length}`); // DEBUG
                         // --- END RESTORED FILTER LOGIC ---
                     } else if (dataType === 'conferences') {
                         itemsToShow = allItems.slice(0, 3); // Keep showing top 3 conferences
@@ -393,8 +408,8 @@
                 console.log(`Calling displayItems for ${dataType} with ${itemsToShow.length} items.`); // DEBUG
                 displayItems(listElement, itemsToShow, currentConfig.titlePlural.toLowerCase());
 
-                if (btn) { btn.textContent = showAll ? '(Show Selected)' : '(Show All)'; btn.onclick = () => loadData(dataType, !showAll); }
-                if (titleSpan) { titleSpan.textContent = showAll ? currentConfig.titlePlural : `Selected ${currentConfig.titlePlural}`; }
+                if (btn) { btn.textContent = showAll ? '(Show Featured)' : '(Show All)'; btn.onclick = () => loadData(dataType, !showAll); }
+                if (titleSpan) { titleSpan.textContent = showAll ? currentConfig.titlePlural : `Featured ${currentConfig.titlePlural}`; }
 
                 // --- Setup keyword scrolling after items are displayed ---
                 // setupKeywordScrolling(); // REMOVED FROM HERE
@@ -429,8 +444,8 @@
                         targetElement.style.backgroundColor = '#e8f0fe'; // Light blue highlight
                         setTimeout(() => {
                             targetElement.style.backgroundColor = ''; // Remove highlight
-                            // Ensure correct background is restored if it was .first-author
-                            if (targetElement.classList.contains('first-author')) {
+                            // Ensure correct background is restored if it was featured
+                            if (targetElement.classList.contains('publication-featured')) {
                                 targetElement.style.backgroundColor = '#f8f9fa';
                             } else {
                                 targetElement.style.backgroundColor = '';

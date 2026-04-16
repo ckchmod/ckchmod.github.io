@@ -1,6 +1,24 @@
 {
   "publications": [
     {
+      "selected": false,
+      "authors": "Stanley, E. A. M., Tsang, R. Y., Gillett, H., Souza, R., Vigneshwaran, V., Kang, C., McCradden, M. D., Wilms, M., & Forkert, N. D.",
+      "year": "2026",
+      "title": "Connecting algorithmic fairness and fair outcomes in a sociotechnical simulation case study of AI-assisted healthcare",
+      "journal": "Nature Communications",
+      "pages": "17, 788",
+      "url": "https://www.nature.com/articles/s41467-025-67470-5"
+    },
+    {
+      "selected": false,
+      "authors": "Moore, J. A., Vigneshwaran, V., Winder, A. J., Kang, C., Wilms, M., & Forkert, N. D.",
+      "year": "2025",
+      "title": "Digital dementia and testing of cognitive intervention for degenerating neural networks",
+      "journal": "npj Systems Biology and Applications",
+      "pages": "11, 125",
+      "url": "https://www.nature.com/articles/s41540-025-00596-w"
+    },
+    {
       "selected": true,
       "authors": "Kang, C., Moore, J. A., Robertson, S., Wilms, M., Towlson, E. K., & Forkert, N. D.",
       "year": "2025",

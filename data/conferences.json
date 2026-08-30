@@ -1,7 +1,6 @@
 {
   "conferences": [
     {
-      "selected": true,
       "featured": true,
       "title": "RIVA Cytology Classification and Detection: A Lesson on How \"None of Us is as Smart as All of Us\"",
       "authors": "C. Kang, V. Vigneshwaran, N. D. Forkert",
@@ -10,7 +9,6 @@
       "type": "Poster"
     },
     {
-      "selected": true,
       "featured": true,
       "title": "A Cascaded YOLO-Based Framework for Robust Cervical Cell Detection in Pap Smear Images",
       "authors": "V. Vigneshwaran, C. Kang, N. D. Forkert",
@@ -19,7 +17,6 @@
       "type": "Oral Presentation"
     },
     {
-      "selected": true,
       "featured": true,
       "title": "Towards associative memory in convolutional neural networks for in silico neurodegenerative diseases",
       "authors": "C. Kang, J. A. Moore, M. Jeong, M. Wilms, & N. D. Forkert",
@@ -28,7 +25,6 @@
       "type": "Oral Presentation"
     },
     {
-      "selected": true,
       "featured": false,
       "title": "Emergent collective behaviors in coupled Boolean networks",
       "authors": "C. Kang & N. K. Voulgarakis",
@@ -37,7 +33,6 @@
       "type": ""
     },
     {
-      "selected": true,
       "featured": false,
       "title": "Emergent collective behaviors in coupled Boolean networks",
       "authors": "C. Kang & N. K. Voulgarakis",
@@ -46,7 +41,6 @@
       "type": ""
     },
     {
-      "selected": true,
       "featured": false,
       "title": "Multiscale Modeling of Multiple Myeloma Using Biocellion Framework",
       "authors": "C. Kang, S. Kahan, & A. Ratushny",
@@ -55,7 +49,6 @@
       "type": "Poster"
     },
     {
-      "selected": true,
       "featured": false,
       "title": "Triangle Partitioning and Linear Optimization of Forward Lines",
       "authors": "C. Kang",

@@ -195,14 +195,14 @@
     </section>
 
     <section id="publications">
-         <h2><span>Featured Publications</span> <button class="expand-btn" data-target="publications">(Show All)</button></h2>
+         <h2><span>Featured Publications</span> <button class="expand-btn" data-target="publications" aria-controls="publications-list" aria-expanded="false">(Show All)</button></h2>
         <div id="publications-list">
              <!-- Content will be loaded here -->
         </div>
     </section>
 
     <section id="conferences">
-         <h2><span>Featured Conference Proceedings</span> <button class="expand-btn" data-target="conferences">(Show All)</button></h2>
+         <h2><span>Featured Conference Proceedings</span> <button class="expand-btn" data-target="conferences" aria-controls="conferences-list" aria-expanded="false">(Show All)</button></h2>
         <div id="conferences-list">
              <!-- Content will be loaded here -->
         </div>
@@ -276,9 +276,9 @@
                         div.className = 'publication';
                         const year = item.year || 'N/A';
                         const journal = item.journal || 'No Journal';
-                        const pages = item.pages || 'N/A';
+                        const pages = item.pages ? `, ${item.pages}` : '';
                         // Use titleHtml which might be a link or plain text
-                        p.innerHTML = `${authorsHtml} (${year}). ${titleHtml}. <i>${journal}</i>, ${pages}.`;
+                        p.innerHTML = `${authorsHtml} (${year}). ${titleHtml}. <i>${journal}</i>${pages}.`;
                         if (isFirstAuthor) {
                             div.classList.add('publication-featured');
                         }
@@ -404,7 +404,11 @@
                 console.log(`Calling displayItems for ${dataType} with ${itemsToShow.length} items.`); // DEBUG
                 displayItems(listElement, itemsToShow, currentConfig.titlePlural.toLowerCase());
 
-                if (btn) { btn.textContent = showAll ? '(Show Featured)' : '(Show All)'; btn.onclick = () => loadData(dataType, !showAll); }
+                if (btn) {
+                    btn.textContent = showAll ? '(Show Featured)' : '(Show All)';
+                    btn.setAttribute('aria-expanded', showAll ? 'true' : 'false');
+                    btn.onclick = () => loadData(dataType, !showAll);
+                }
                 if (titleSpan) { titleSpan.textContent = showAll ? currentConfig.titlePlural : `Featured ${currentConfig.titlePlural}`; }
 
                 // --- Setup keyword scrolling after items are displayed ---

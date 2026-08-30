@@ -1,10 +1,9 @@
 {
   "publications": [
     {
-      "selected": false,
       "featured": false,
       "first_author": false,
-      "authors": "A. Munk, S. Cerri, V. Nersesjan, C. H. Krag, J. Ambsdorf, P. R. García, et al.",
+      "authors": "A. Munk, S. Cerri, V. Nersesjan, et al. (including C. Kang)",
       "year": "2026",
       "title": "Towards Brain MRI Foundation Models for the Clinic: Findings from the FOMO25 Challenge",
       "journal": "arXiv preprint arXiv:2604.11679",
@@ -12,7 +11,6 @@
       "url": "https://arxiv.org/abs/2604.11679"
     },
     {
-      "selected": true,
       "featured": true,
       "first_author": true,
       "authors": "C. Kang, V. Vigneshwaran, N. D. Forkert",
@@ -23,7 +21,6 @@
       "url": "https://ieeexplore.ieee.org/abstract/document/11515541/"
     },
     {
-      "selected": false,
       "featured": false,
       "first_author": false,
       "authors": "V. Vigneshwaran, C. Kang, N. D. Forkert",
@@ -34,7 +31,16 @@
       "url": "https://ieeexplore.ieee.org/abstract/document/11515325/"
     },
     {
-      "selected": false,
+      "featured": false,
+      "first_author": false,
+      "authors": "K. Amador, S. Jeong, C. Kang, D. A. Martinez, V. Vigneshwaran, N. D. Forkert",
+      "year": "2026",
+      "title": "Residual-Encoder nnU-Net with Small-Component Filtering for Multi-Site Stroke Lesion Segmentation in T1-weighted MRI",
+      "journal": "Stroke and Neurovascular Diseases Workshop on Imaging and Treatment Challenges (ISLES 2026)",
+      "pages": "",
+      "url": ""
+    },
+    {
       "featured": false,
       "first_author": false,
       "authors": "E. A. M. Stanley, R. Y. Tsang, H. Gillett, R. Souza, V. Vigneshwaran, C. Kang, et al.",
@@ -45,7 +51,6 @@
       "url": "https://www.nature.com/articles/s41467-025-67470-5"
     },
     {
-      "selected": false,
       "featured": false,
       "first_author": false,
       "authors": "J. A. Moore, V. Vigneshwaran, A. J. Winder, C. Kang, M. Wilms, N. D. Forkert",
@@ -56,7 +61,6 @@
       "url": "https://www.nature.com/articles/s41540-025-00596-w"
     },
     {
-      "selected": true,
       "featured": true,
       "first_author": true,
       "authors": "C. Kang, J. A. Moore, S. Robertson, M. Wilms, E. K. Towlson, N. D. Forkert",
@@ -67,7 +71,6 @@
       "url": "https://www.sciencedirect.com/science/article/pii/S089360802500187X"
     },
     {
-      "selected": true,
       "featured": true,
       "first_author": true,
       "authors": "C. Kang, P. Mehta, Y. S. Chang, R. A. Bhadelia, R. Rojas, M. Wintermark, et al.",
@@ -78,7 +81,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/39690177/"
     },
     {
-      "selected": false,
       "featured": false,
       "first_author": false,
       "authors": "J. A. Moore, C. Kang, V. Vigneshwaran, E. A. M. Stanley, A. Memon, M. Wilms, N. D. Forkert",
@@ -89,7 +91,6 @@
       "url": "https://www.nature.com/articles/s41598-025-89738-y"
     },
     {
-      "selected": false,
       "featured": false,
       "first_author": false,
       "authors": "R. Souza, E. A. M. Stanley, A. J. Winder, C. Kang, K. Amador, E. Y. Ohara, et al.",
@@ -100,7 +101,6 @@
       "url": "https://www.nature.com/articles/s41746-025-01499-0"
     },
     {
-      "selected": false,
       "featured": false,
       "first_author": false,
       "authors": "R. Souza, E. A. M. Stanley, V. Gulve, J. Moore, C. Kang, R. Camicioli, O. Monchi, et al.",
@@ -111,7 +111,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/39308760/"
     },
     {
-      "selected": false,
       "featured": false,
       "first_author": false,
       "authors": "A. Memon, J. A. Moore, C. Kang, Z. Ismail, N. D. Forkert, et al.",
@@ -122,7 +121,6 @@
       "url": "https://link.springer.com/article/10.1007/s12120-024-01180-4"
     },
     {
-      "selected": false,
       "featured": false,
       "first_author": true,
       "authors": "C. Kang, M. McElroy, N. K. Voulgarakis",
@@ -133,7 +131,6 @@
       "url": "https://www.mdpi.com/1099-4300/25/2/235"
     },
     {
-      "selected": false,
       "featured": false,
       "first_author": true,
       "authors": "C. Kang",
@@ -144,18 +141,16 @@
       "url": ""
     },
     {
-      "selected": false,
       "featured": false,
       "first_author": true,
       "authors": "C. Kang, N. Voulgarakis",
       "year": "2022",
-      "title": "Emergent collective behaviors in coupled Boolean networks.",
+      "title": "Emergent collective behaviors in coupled Boolean networks",
       "journal": "Virtual Joint Mathematics Meetings (JMM 2022)",
       "pages": "",
       "url": ""
     },
     {
-      "selected": false,
       "featured": false,
       "first_author": true,
       "authors": "C. Kang, B. Aguilar, I. Shmulevich",

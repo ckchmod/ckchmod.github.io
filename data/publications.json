@@ -4,11 +4,44 @@
       "selected": false,
       "featured": false,
       "first_author": false,
+      "authors": "A. Munk, S. Cerri, V. Nersesjan, C. H. Krag, J. Ambsdorf, P. R. García, et al.",
+      "year": "2026",
+      "title": "Towards Brain MRI Foundation Models for the Clinic: Findings from the FOMO25 Challenge",
+      "journal": "arXiv preprint arXiv:2604.11679",
+      "pages": "",
+      "url": "https://arxiv.org/abs/2604.11679"
+    },
+    {
+      "selected": true,
+      "featured": true,
+      "first_author": true,
+      "authors": "C. Kang, V. Vigneshwaran, N. D. Forkert",
+      "year": "2026",
+      "title": "RIVA Cytology Classification and Detection: A Lesson on How \"None of Us is as Smart as All of Us\"",
+      "journal": "2026 IEEE 23rd International Symposium on Biomedical Imaging (ISBI)",
+      "pages": "1-4",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11515541/"
+    },
+    {
+      "selected": false,
+      "featured": false,
+      "first_author": false,
+      "authors": "V. Vigneshwaran, C. Kang, N. D. Forkert",
+      "year": "2026",
+      "title": "A Cascaded YOLO-Based Framework for Robust Cervical Cell Detection in Pap Smear Images",
+      "journal": "2026 IEEE 23rd International Symposium on Biomedical Imaging (ISBI)",
+      "pages": "1-4",
+      "url": "https://ieeexplore.ieee.org/abstract/document/11515325/"
+    },
+    {
+      "selected": false,
+      "featured": false,
+      "first_author": false,
       "authors": "E. A. M. Stanley, R. Y. Tsang, H. Gillett, R. Souza, V. Vigneshwaran, C. Kang, et al.",
       "year": "2025",
       "title": "Connecting algorithmic fairness and fair outcomes in a sociotechnical simulation case study of AI-assisted healthcare",
       "journal": "Nature Communications",
-      "pages": "17, 788",
+      "pages": "17 (1), 788",
       "url": "https://www.nature.com/articles/s41467-025-67470-5"
     },
     {
@@ -45,32 +78,10 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/39690177/"
     },
     {
-      "selected": true,
-      "featured": true,
-      "first_author": true,
-      "authors": "C. Kang, M. McElroy, N. K. Voulgarakis",
-      "year": "2024",
-      "title": "Emergent Criticality in Coupled Boolean Networks",
-      "journal": "Entropy",
-      "pages": "25 (2), 235",
-      "url": "https://www.mdpi.com/1099-4300/25/2/235"
-    },
-    {
-      "selected": false,
-      "featured": false,
-      "first_author": true,
-      "authors": "C. Kang, B. Aguilar, I. Shmulevich",
-      "year": "2018",
-      "title": "Emergence of diversity in homogeneous coupled Boolean networks",
-      "journal": "Physical Review E",
-      "pages": "97 (5), 052415",
-      "url": "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.97.052415"
-    },
-    {
       "selected": false,
       "featured": false,
       "first_author": false,
-      "authors": "J. A. Moore, C. Kang, V. Vigneshwaran, E. A. Stanley, A. Memon, M. Wilms, N. D. Forkert",
+      "authors": "J. A. Moore, C. Kang, V. Vigneshwaran, E. A. M. Stanley, A. Memon, M. Wilms, N. D. Forkert",
       "year": "2025",
       "title": "Towards realistic simulation of disease progression in the visual cortex with CNNs",
       "journal": "Scientific Reports",
@@ -114,6 +125,17 @@
       "selected": false,
       "featured": false,
       "first_author": true,
+      "authors": "C. Kang, M. McElroy, N. K. Voulgarakis",
+      "year": "2023",
+      "title": "Emergent Criticality in Coupled Boolean Networks",
+      "journal": "Entropy",
+      "pages": "25 (2), 235",
+      "url": "https://www.mdpi.com/1099-4300/25/2/235"
+    },
+    {
+      "selected": false,
+      "featured": false,
+      "first_author": true,
       "authors": "C. Kang",
       "year": "2023",
       "title": "Critical Dynamics in Coupled Boolean Networks With Applications in Pluripotent Stem Cells",
@@ -131,6 +153,17 @@
       "journal": "Virtual Joint Mathematics Meetings (JMM 2022)",
       "pages": "",
       "url": ""
+    },
+    {
+      "selected": false,
+      "featured": false,
+      "first_author": true,
+      "authors": "C. Kang, B. Aguilar, I. Shmulevich",
+      "year": "2018",
+      "title": "Emergence of diversity in homogeneous coupled Boolean networks",
+      "journal": "Physical Review E",
+      "pages": "97 (5), 052415",
+      "url": "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.97.052415"
     }
   ]
 }
